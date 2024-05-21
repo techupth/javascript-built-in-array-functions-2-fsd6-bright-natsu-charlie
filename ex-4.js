@@ -372,6 +372,9 @@ const bills = [
     pointRate: 0.01,
   },
 ];
+let uniqueMembers = new Set(
+  bills.filter((bill) => bill.member !== null).map((bill) => bill.member.name)
+);
 
-// Start coding here
-const totalMembers;
+let totalUniqueMembers = uniqueMembers.size;
+console.log(totalUniqueMembers);
