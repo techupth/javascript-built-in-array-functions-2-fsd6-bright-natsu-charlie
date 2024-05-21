@@ -374,4 +374,21 @@ const bills = [
 ];
 
 // Start coding here
-const totalMembers;
+
+// solution
+// เอารายชื่อที่ซ้ำกันออก
+// เหลือรายชื่อที่ไม่ซ้ำกันเท่าไร ให้เอามารวมกัน
+const totalMembers = bills
+  .filter((item) => {
+    return item.member !== null;
+  })
+  .map((item) => {
+    return item.member.name;
+  })
+  .reduce((acc, item) => {
+    if (!acc.includes(item)) {
+      acc.push(item);
+    }
+    return acc;
+  }, []).length;
+console.log(`Unique Members Count: ${totalMembers}`);

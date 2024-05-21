@@ -374,4 +374,15 @@ const bills = [
 ];
 
 // Start coding here
-const billMembers;
+
+// solution
+// ใช้โค้ดจากข้อ2มากรอกเอาค่าnullออก
+// เลือกเอาเฉพาะรายชื่อmamberออกมาเเสดง
+const billMembers = bills
+  .filter((item) => {
+    return item.member !== null;
+  })
+  .map((item) => {
+    return item.member.name;
+  });
+console.log(billMembers);

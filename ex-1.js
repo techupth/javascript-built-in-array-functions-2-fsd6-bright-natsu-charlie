@@ -374,3 +374,18 @@ const bills = [
 ];
 
 // Start coding here
+
+// solution
+// หาผลรวมทั้งหมด property total ใน bills
+// ดึงข้อมูล ใน property total ออกมาบวกกัน
+// let totalBills = 0;
+// for (let i = 0; i < bills.length; i++) {
+//   totalBills = totalBills + bills[i].total;
+// }
+// console.log(totalBills);
+
+let totalBills = bills.reduce((acc, itemBill) => {
+  let result = 0;
+  return (result = acc + itemBill.total);
+}, 0);
+console.log(totalBills);
